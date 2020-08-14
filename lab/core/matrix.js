@@ -29,7 +29,7 @@ class Matrix
 		
 	}
 
-	// given an array or list of matrices, multiplies them all (in order) and returns the result
+	// given an array or list of matrices, multiplies them all (in order, left to right) and returns the result
 	// use a loop and the mul method.
 	static prod(mats)
 	{
