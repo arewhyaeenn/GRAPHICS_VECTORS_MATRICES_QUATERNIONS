@@ -108,4 +108,32 @@ class Vector
 	{
 		return new Float32Array([this.x, this.y, this.z]);
 	}
+
+	static equals(v1, v2)
+	{
+		if (! v1 instanceof Vector || ! v2 instanceof Vector)
+		{
+			console.log("%cInvalid inputs for Vector.equals.","color:red");
+			return false;
+		}
+
+		var threshold = 0.001;
+
+		if (Math.abs(v1.x - v2.x) > threshold || isNaN(Math.abs(v1.x - v2.x)))
+		{
+			return false;
+		}
+		
+		if (Math.abs(v1.y - v2.y) > threshold || isNaN(Math.abs(v1.y - v2.y)))
+		{
+			return false;
+		}
+		
+		if (Math.abs(v1.z - v2.z) > threshold || isNaN(Math.abs(v1.z - v2.z)))
+		{
+			return false;
+		}
+
+		return true;
+	}
 }

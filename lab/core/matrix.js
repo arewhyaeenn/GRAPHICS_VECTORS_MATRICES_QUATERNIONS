@@ -41,4 +41,24 @@ class Matrix
 	//       multiplication. We will often calculate a transform on the CPU with the matrix
 	//       multiplication we've defined, and then apply it to every vector in a model in
 	//       the shaders.
+
+	static equals(mat1, mat2)
+	{
+		if (! mat1 instanceof Float32Array || ! mat2 instanceof Float32Array 
+			|| mat1.length != 16 || mat2.length != 16)
+		{
+			console.log("%cInvalid inputs for Matrix.equals.","color:red");
+			return false;
+		}
+
+		let threshold = 0.001;
+		for (var i = 0; i < 16; i++)
+		{
+			if (Math.abs(mat1[i]-mat2[i]) > threshold)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
 }
