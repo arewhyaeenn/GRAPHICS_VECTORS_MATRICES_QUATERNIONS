@@ -14,7 +14,16 @@ var testlog = function(bool)
 var floatApproxEquals = function(f1, f2)
 {
 	let threshold = 0.001;
-	if (Math.abs(f1-f2) > threshold)
+	if (isNan(f1) || isNan(f2))
+	{
+		return false;
+	}
+	let abs = Math.abs(f1-f2);
+	if (isNan(abs))
+	{
+		return false;
+	}
+	if ( abs > threshold)
 	{
 		return false;
 	}
