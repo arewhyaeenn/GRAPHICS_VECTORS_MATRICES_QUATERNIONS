@@ -14,12 +14,12 @@ var testlog = function(bool)
 var floatApproxEquals = function(f1, f2)
 {
 	let threshold = 0.001;
-	if (isNan(f1) || isNan(f2))
+	if (isNaN(f1) || isNaN(f2))
 	{
 		return false;
 	}
 	let abs = Math.abs(f1-f2);
-	if (isNan(abs))
+	if (isNaN(abs))
 	{
 		return false;
 	}
