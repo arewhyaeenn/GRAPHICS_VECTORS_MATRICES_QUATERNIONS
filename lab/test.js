@@ -266,14 +266,14 @@ console.log("	Getting dot product of (2,0,3) and (0,-1,4)...");
 var d = Vector.dot(new Vector(2,0,3), new Vector(0,-1,4));
 correct = 12;
 
-console.log("	Cross product is",d,"(should be 12)");
+console.log("	Dot product is",d,"(should be 12)");
 testlog(floatApproxEquals(d,correct));
 
 console.log("	Getting dot product of (3,4,12) and (-3,-4,-12)...");
 var d = Vector.dot(new Vector(3,4,12), new Vector(-3,-4,-12));
 correct = -169;
 
-console.log("	Cross product is",d,"(should be -169)");
+console.log("	Dot product is",d,"(should be -169)");
 testlog(floatApproxEquals(d,correct));
 
 
